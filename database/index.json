@@ -1,0 +1,50 @@
+{
+    "logics": {
+        "type": "block",
+        "name": "AND",
+        "blocks": [
+            {
+                "name": "AppCreate",
+                "type": "event",
+                "value": "123",
+                "action": "INCLUDE",
+                "operator": "EQ",
+                "selection": "ALL"
+            },
+            {
+                "type": "block",
+                "name": "OR",
+                "blocks": [
+                    {
+                        "name": "email",
+                        "type": "user_property",
+                        "value": "secretemail@example.com",
+                        "action": "INCLUDE",
+                        "operator": "EQ"
+                    },
+                    {
+                        "name": "language",
+                        "type": "property",
+                        "value": [
+                            "ar_OM",
+                            "ru_RU"
+                        ],
+                        "operator": "IN"
+                    }
+                ]
+            },
+            {
+                "name": "push_token",
+                "type": "property",
+                "value": 1,
+                "operator": "EQ"
+            },
+            {
+                "name": "device_type",
+                "type": "property",
+                "value": "phone",
+                "operator": "EQ"
+            }
+        ]
+    }
+}
